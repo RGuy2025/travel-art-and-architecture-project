@@ -1,7 +1,82 @@
-h1 {
-  font-family: Poppins;
+:root {
+  --primary-color: #ececec;
+  --secondary-color: #53a8b6;
+  --tertiary-color: #bbe4e9;
+  --quaternary-color: #5585b5;
+}
+body {
+  font-family: poppins, sans-serif;
+  background-color: var(--quaternary-color);
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/roman-colosseum-night.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 200px 0;
+}
+header h1 {
   font-weight: 700;
-  font-style: Bold;
   font-size: 96px;
-  line-height: 100%;
+  line-height: 1;
+  margin: 0;
+}
+header h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  margin: 0;
+  padding: 20px 0;
+  text-transform: uppercase;
+  
+}
+header h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px 0;;
+}
+header a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin-top: 32px;
+}
+
+@media (max-width: 900px){
+  header {
+    padding: 60px 0;
+  }
+  header h1 {
+    font-size: 48px;
+  }
+  header h2 {
+    font-size: 20px;
+    
+  }
+  header h3 {
+    font-size: 16px;
+  }
+  header a {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
