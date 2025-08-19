@@ -8,6 +8,9 @@ body {
   font-family: poppins, sans-serif;
   background-color: var(--quaternary-color);
 }
+.text-center {
+  text-align: center;
+}
 
 .container {
   max-width: 1400px;
@@ -16,7 +19,6 @@ body {
 }
 .grid {
   display: grid;
-
   grid-gap: 64px;
   padding: 40px 40px;
 }
@@ -26,14 +28,25 @@ body {
 .grid-3-columns {
   grid-template-columns: 1fr 2fr 2fr;
 }
-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 0;
+.grid-4-equal-columns {
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:10px;
+  padding: 40px 5px;
+  
 }
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 75px;
+}
+section.secondary {
+  background-color: var(--secondary-color);
+  padding:50px 0;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../images/roman-colosseum-night.png");
+    url("../images/sistine-chapel-interior.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--primary-color);
@@ -98,9 +111,17 @@ main h3 {
   text-transform: uppercase;
 }
 main h4 {
-  font-weight: 400;
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.6;
+  margin: 0;
+}
+main h5 {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 2;
+  text-decoration: underline;
+}
+main p {
   margin: 0;
 }
 main a {
@@ -112,6 +133,35 @@ main a {
 }
 main a:hover {
   color: rgb(4, 4, 80);
+}
+.card {
+  background-color: var(--primary-color);
+}
+.card-body{
+  padding: 20px;
+}
+.card-footer{
+  padding: 20px;
+  
+}
+.btn {
+  display: block;
+  background-color: var(--quaternary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  padding: 12px;
+
+}
+.btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+  transition: all 0.3s ease;
 }
 footer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -183,5 +233,17 @@ footer li {
   .grid {
     grid-template-columns: 1fr;
     grid-gap: 0px;
+  }
+  .secondary {
+    padding: 20px;
+  }
+  main h3 {
+    font-size: 15px;
+  }
+  main h4 {
+    font-size: 13px;
+  }
+  main p {
+    font-size: 10px;
   }
 }
