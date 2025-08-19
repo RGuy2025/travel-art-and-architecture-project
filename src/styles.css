@@ -28,10 +28,10 @@ body {
 .grid-3-columns {
   grid-template-columns: 1fr 2fr 2fr;
 }
-.grid-4-equal-columns {
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap:10px;
-  padding: 40px 5px;
+.grid-3-equal-columns {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:20px;
+  padding: 40px;
   
 }
 section {
