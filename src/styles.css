@@ -8,6 +8,10 @@ body {
   font-family: poppins, sans-serif;
   background-color: var(--quaternary-color);
 }
+img {
+  border-radius: 5px;
+  max-width: 100%;
+}
 .text-center {
   text-align: center;
 }
@@ -30,9 +34,8 @@ body {
 }
 .grid-3-equal-columns {
   grid-template-columns: repeat(3, 1fr);
-  grid-gap:20px;
+  grid-gap: 20px;
   padding: 40px;
-  
 }
 section {
   max-width: 100%;
@@ -41,13 +44,14 @@ section {
 }
 section.secondary {
   background-color: var(--secondary-color);
-  padding:50px 0;
+  padding: 50px 0;
 }
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../images/sistine-chapel-interior.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   color: var(--primary-color);
   text-align: center;
@@ -136,13 +140,20 @@ main a:hover {
 }
 .card {
   background-color: var(--primary-color);
+  border-radius: 4px;
 }
-.card-body{
+.card-header {
+  height: 200px;
+}
+.card-header img {
+  width: 50%;
+  height: 100%;
+}
+.card-body {
   padding: 20px;
 }
-.card-footer{
+.card-footer {
   padding: 20px;
-  
 }
 .btn {
   display: block;
@@ -156,7 +167,6 @@ main a:hover {
   letter-spacing: 2px;
   border-radius: 4px;
   padding: 12px;
-
 }
 .btn:hover {
   color: var(--secondary-color);
@@ -168,6 +178,7 @@ footer {
     url("../images/louvre-interior.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: var(--primary-color);
 }
 footer a {
@@ -232,11 +243,13 @@ footer li {
   }
   .grid {
     grid-template-columns: 1fr;
-    grid-gap: 0px;
+    grid-gap: 20px;
   }
-  .secondary {
-    padding: 20px;
+  .grid-3-equal-columns {
+    justify-content: center;
+    padding:20px 0;
   }
+
   main h3 {
     font-size: 15px;
   }
@@ -245,5 +258,14 @@ footer li {
   }
   main p {
     font-size: 10px;
+  }
+  section.secondary {
+    padding: 20px;
+  }
+  .card {
+    margin: 0;
+  }
+  .card-header {
+    height: 100px;
   }
 }
